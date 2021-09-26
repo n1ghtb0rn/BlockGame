@@ -13,6 +13,8 @@ public class DataManager {
     public static final int CANVAS_SIZE_Y = UNIT_SIZE * UNITS_Y;
     public static final int GRADIENT_COLOR = Color.parseColor("#FFFFFF");
 
+    public static String playerName = "Player";
+
     public static GameActivity gameActivity;
     public static EditorActivity editorActivity;
     public static DrawManager drawManager;

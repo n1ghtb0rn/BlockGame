@@ -6,8 +6,6 @@ import java.util.ArrayList;
 
 public class PlayerUnit extends CircleUnit {
 
-    private String name = name = "Player";
-
     public PlayerUnit(int _posX, int _posY){
         super(_posX, _posY);
         this.color = Color.parseColor("#43765f");
@@ -40,10 +38,6 @@ public class PlayerUnit extends CircleUnit {
         }
 
         return null;
-    }
-
-    public String getName(){
-        return this.name;
     }
 
 }
