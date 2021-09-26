@@ -18,7 +18,13 @@ public class OnSwipeTouchListener implements OnTouchListener {
 
     @Override
     public boolean onTouch(View v, MotionEvent event) {
-        Log.d(DataManager.TAG, "HEJ!");
+        if (event.getAction() != MotionEvent.ACTION_DOWN){
+            return false;
+        }
+        if(DataManager.editorActivity == null){
+            return false;
+        }
+        DataManager.editorManager.addUnit(event);
         return gestureDetector.onTouchEvent(event);
     }
 
@@ -34,6 +40,10 @@ public class OnSwipeTouchListener implements OnTouchListener {
 
         @Override
         public boolean onFling(MotionEvent e1, MotionEvent e2, float velocityX, float velocityY) {
+            if(DataManager.gameActivity == null){
+                return false;
+            }
+
             boolean result = false;
             try {
                 float diffY = e2.getY() - e1.getY();
