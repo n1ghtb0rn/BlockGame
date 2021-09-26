@@ -26,8 +26,7 @@ public class MainActivity extends AppCompatActivity {
 
         DataManager.mainActivity = this;
         LevelManager.createLevels();
-        UnitManager.createCurrentLevel();
-        this.draw();
+        this.resetLevel(null);
     }
 
     public void btnUp(View v){
@@ -80,6 +79,11 @@ public class MainActivity extends AppCompatActivity {
         this.paint = new Paint(Paint.ANTI_ALIAS_FLAG);
         this.paint.setStyle(Paint.Style.FILL);
         this.gfx.drawPaint(this.paint);
+    }
+
+    public void resetLevel(View v){
+        UnitManager.createCurrentLevel();
+        this.draw();
     }
 
 }
