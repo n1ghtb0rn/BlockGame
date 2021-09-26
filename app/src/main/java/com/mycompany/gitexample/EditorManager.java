@@ -16,9 +16,14 @@ public class EditorManager {
         if(this.selectedUnit == null){
             return;
         }
-        float posX = event.getX();
-        float posY = event.getY();
-        Log.d(DataManager.TAG, "Position: " + posX + ", " + posY);
+
+        float ratioX = DataManager.drawManager.bitmap.getWidth() / DataManager.drawManager.imageView2.getWidth();
+        int posX = (int) (event.getX() * ratioX);
+        float ratioY = DataManager.drawManager.bitmap.getWidth() / DataManager.drawManager.imageView2.getWidth();
+        int posY = (int) (event.getX() * ratioY);
+
+        Log.d(DataManager.TAG, posX + ", " + posY);
+
     }
 
 }

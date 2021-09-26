@@ -22,5 +22,4 @@ public class DataManager {
     public static EditorManager editorManager;
 
     public static String playerName = "Player";
-    public static MotionEvent event;
 }
