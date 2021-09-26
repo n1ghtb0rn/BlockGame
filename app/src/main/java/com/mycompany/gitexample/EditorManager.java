@@ -6,7 +6,6 @@ import android.view.MotionEvent;
 public class EditorManager {
 
     private Unit selectedUnit;
-    private MotionEvent event;
 
     public void selectUnit(Unit unit){
         this.selectedUnit = unit;
