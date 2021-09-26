@@ -8,7 +8,7 @@ public class BoxUnit extends RectangleUnit {
 
     public BoxUnit(int _posX, int _posY){
         super(_posX, _posY);
-        this.color = Color.YELLOW;
+        this.color = Color.parseColor("#2b1700");
     }
 
     public void move(int difX, int difY){
@@ -23,7 +23,7 @@ public class BoxUnit extends RectangleUnit {
         if(other == UnitManager.button){
             LevelManager.nextLevel();
             UnitManager.createCurrentLevel();
-            DataManager.mainActivity.draw();
+            DataManager.drawManager.draw();
         }
     }
 

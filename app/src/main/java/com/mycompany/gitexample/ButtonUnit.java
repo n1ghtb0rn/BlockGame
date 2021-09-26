@@ -6,7 +6,7 @@ public class ButtonUnit extends CircleUnit {
 
     public ButtonUnit(int _posX, int _posY){
         super(_posX, _posY);
-        this.color = Color.RED;
+        this.color = Color.parseColor("#781111");
     }
 
 }
