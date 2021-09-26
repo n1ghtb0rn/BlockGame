@@ -2,6 +2,8 @@ package com.mycompany.gitexample;
 
 import android.graphics.Color;
 
+import androidx.appcompat.app.AppCompatActivity;
+
 public class DataManager {
 
     public static final int UNIT_SIZE = 40;
@@ -12,6 +14,7 @@ public class DataManager {
     public static final int GRADIENT_COLOR = Color.parseColor("#FFFFFF");
 
     public static GameActivity gameActivity;
+    public static EditorActivity editorActivity;
     public static DrawManager drawManager;
 
 }

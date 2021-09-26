@@ -14,8 +14,6 @@ public class GameActivity extends AppCompatActivity {
         setContentView(R.layout.activity_game);
 
         DataManager.gameActivity = this;
-        DataManager.drawManager = new DrawManager();
-        LevelManager.createLevels();
         DataManager.drawManager.resetLevel();
     }
 
