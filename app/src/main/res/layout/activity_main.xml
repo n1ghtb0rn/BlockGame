@@ -20,7 +20,9 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:strokeColor="#FBFBFB" />
+        app:strokeColor="#FBFBFB"
+        android:theme="@style/Button.Color"
+        android:colorAccent="#FF0000" />
 
     <Button
         android:id="@+id/btnEditor"
@@ -38,9 +40,11 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="32dp"
-        android:background="#CCD4DA"
+        android:padding="5dip"
+        android:background="@drawable/rounded_edittext"
         android:ems="10"
         android:hint="Player name"
+        android:includeFontPadding="false"
         android:inputType="textPersonName"
         android:textSize="20sp"
         app:layout_constraintEnd_toEndOf="parent"
