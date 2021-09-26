@@ -62,18 +62,18 @@ public class OnSwipeTouchListener implements OnTouchListener {
     }
 
     public void onSwipeRight() {
-        DataManager.mainActivity.move(DataManager.UNIT_SIZE,0);
+        DataManager.gameActivity.move(DataManager.UNIT_SIZE,0);
     }
 
     public void onSwipeLeft() {
-        DataManager.mainActivity.move(-DataManager.UNIT_SIZE,0);
+        DataManager.gameActivity.move(-DataManager.UNIT_SIZE,0);
     }
 
     public void onSwipeTop() {
-        DataManager.mainActivity.move(0,-DataManager.UNIT_SIZE);
+        DataManager.gameActivity.move(0,-DataManager.UNIT_SIZE);
     }
 
     public void onSwipeBottom() {
-        DataManager.mainActivity.move(0,DataManager.UNIT_SIZE);
+        DataManager.gameActivity.move(0,DataManager.UNIT_SIZE);
     }
 }
