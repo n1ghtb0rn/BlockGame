@@ -1,19 +1,25 @@
 package com.mycompany.gitexample;
 
-public class Unit {
-    private int posX = 0;
-    private int posY = 0;
-    private int size = DataManager.CANVAS_SIZE_X/40;
-    private int speed = size*2;
+import android.graphics.Canvas;
+import android.graphics.Color;
+import android.graphics.Paint;
+import android.widget.ImageView;
+
+abstract public class Unit {
+
+    protected int posX;
+    protected int posY;
+    protected int size = 0;
+    protected int speed = 0;
+    protected int color = Color.WHITE;
+
+    public Unit(int _posX, int _posY){
+        this.posX = _posX;
+        this.posY = _posY;
+    }
 
     public void move(int difX, int difY){
-        this.posX += difX;
-        this.posY += difY;
-        if(     this.posX < 0 || this.posX >= DataManager.CANVAS_SIZE_X ||
-                this.posY < 0 || this.posY >= DataManager.CANVAS_SIZE_Y){
-            this.posX -= difX;
-            this.posY -= difY;
-        }
+        //OVERRIDE THIS IN PLAYER AND BOX CLASS
     }
 
     public int getPosX(){
@@ -30,5 +36,13 @@ public class Unit {
 
     public int getSpeed(){
         return this.speed;
+    }
+
+    public int getColor() {
+        return this.color;
+    }
+
+    public void draw(Paint paint, Canvas gfx){
+        paint.setColor(this.color);
     }
 }
