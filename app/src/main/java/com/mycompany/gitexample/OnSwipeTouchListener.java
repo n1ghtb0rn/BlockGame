@@ -1,6 +1,7 @@
 package com.mycompany.gitexample;
 
 import android.content.Context;
+import android.util.Log;
 import android.view.GestureDetector;
 import android.view.GestureDetector.SimpleOnGestureListener;
 import android.view.MotionEvent;
@@ -17,6 +18,13 @@ public class OnSwipeTouchListener implements OnTouchListener {
 
     @Override
     public boolean onTouch(View v, MotionEvent event) {
+        if (event.getAction() != MotionEvent.ACTION_DOWN){
+            return false;
+        }
+        if(DataManager.editorActivity == null){
+            return false;
+        }
+        DataManager.editorManager.addUnit(event);
         return gestureDetector.onTouchEvent(event);
     }
 
@@ -32,6 +40,10 @@ public class OnSwipeTouchListener implements OnTouchListener {
 
         @Override
         public boolean onFling(MotionEvent e1, MotionEvent e2, float velocityX, float velocityY) {
+            if(DataManager.gameActivity == null){
+                return false;
+            }
+
             boolean result = false;
             try {
                 float diffY = e2.getY() - e1.getY();
@@ -62,18 +74,18 @@ public class OnSwipeTouchListener implements OnTouchListener {
     }
 
     public void onSwipeRight() {
-        DataManager.mainActivity.move(DataManager.UNIT_SIZE,0);
+        DataManager.gameActivity.move(DataManager.UNIT_SIZE,0);
     }
 
     public void onSwipeLeft() {
-        DataManager.mainActivity.move(-DataManager.UNIT_SIZE,0);
+        DataManager.gameActivity.move(-DataManager.UNIT_SIZE,0);
     }
 
     public void onSwipeTop() {
-        DataManager.mainActivity.move(0,-DataManager.UNIT_SIZE);
+        DataManager.gameActivity.move(0,-DataManager.UNIT_SIZE);
     }
 
     public void onSwipeBottom() {
-        DataManager.mainActivity.move(0,DataManager.UNIT_SIZE);
+        DataManager.gameActivity.move(0,DataManager.UNIT_SIZE);
     }
 }

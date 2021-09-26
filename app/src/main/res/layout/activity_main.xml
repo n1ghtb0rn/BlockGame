@@ -4,119 +4,74 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#4C9790"
-    android:backgroundTint="#4D8781"
+    android:background="#000000"
     tools:context=".MainActivity">
 
-    <ImageView
-        android:id="@+id/imageView"
-        android:layout_width="0dp"
-        android:layout_height="0dp"
-        android:background="#494949"
-        app:layout_constraintBottom_toTopOf="@+id/btnUp"
+    <Button
+        android:id="@+id/btnStartGame"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="#FFFFFF"
+        android:backgroundTint="#FFFFFF"
+        android:onClick="startGame"
+        android:shadowColor="#FFFFFF"
+        android:text="Start game"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        tools:srcCompat="@tools:sample/avatars" />
+        app:strokeColor="#FBFBFB"
+        android:theme="@style/Button.Color"
+        android:colorAccent="#FF0000" />
 
     <Button
-        android:id="@+id/btnLeft"
-        android:layout_width="48dp"
-        android:layout_height="48dp"
-        android:background="#FFFFFF"
-        android:backgroundTint="#FF0000"
-        android:foregroundTint="#E91E63"
-        android:onClick="btnLeft"
-        app:layout_constraintBottom_toTopOf="@+id/buttonX"
-        app:layout_constraintStart_toStartOf="parent" />
-
-    <Button
-        android:id="@+id/buttonX10"
-        android:layout_width="48dp"
-        android:layout_height="48dp"
-        android:enabled="false"
-        android:visibility="invisible"
-        app:layout_constraintBottom_toTopOf="@+id/btnLeft"
-        app:layout_constraintStart_toStartOf="parent" />
-
-    <Button
-        android:id="@+id/btnUp"
-        android:layout_width="48dp"
-        android:layout_height="48dp"
-        android:background="#FFFFFF"
-        android:backgroundTint="#FF0000"
-        android:foregroundTint="#E91E63"
-        android:onClick="btnUp"
-        app:layout_constraintBottom_toTopOf="@+id/buttonX8"
-        app:layout_constraintStart_toEndOf="@+id/buttonX10" />
-
-    <Button
-        android:id="@+id/buttonX12"
-        android:layout_width="48dp"
-        android:layout_height="48dp"
-        android:enabled="false"
-        android:visibility="invisible"
-        app:layout_constraintBottom_toTopOf="@+id/btnRight"
-        app:layout_constraintStart_toEndOf="@+id/btnUp" />
-
-    <Button
-        android:id="@+id/buttonX8"
-        android:layout_width="48dp"
-        android:layout_height="48dp"
-        android:enabled="false"
-        android:visibility="invisible"
-        app:layout_constraintBottom_toTopOf="@+id/btnDown"
-        app:layout_constraintStart_toEndOf="@+id/btnLeft" />
-
-    <Button
-        android:id="@+id/btnRight"
-        android:layout_width="48dp"
-        android:layout_height="48dp"
-        android:background="#FFFFFF"
-        android:backgroundTint="#FF0000"
-        android:foregroundTint="#E91E63"
-        android:onClick="btnRight"
-        app:layout_constraintBottom_toTopOf="@+id/buttonX3"
-        app:layout_constraintStart_toEndOf="@+id/buttonX8" />
-
-    <Button
-        android:id="@+id/btnDown"
-        android:layout_width="48dp"
-        android:layout_height="48dp"
-        android:background="#FFFFFF"
-        android:backgroundTint="#FF0000"
-        android:foregroundTint="#E91E63"
-        android:onClick="btnDown"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/buttonX" />
-
-    <Button
-        android:id="@+id/buttonX3"
-        android:layout_width="48dp"
-        android:layout_height="48dp"
-        android:enabled="false"
-        android:visibility="invisible"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/btnDown" />
-
-    <Button
-        android:id="@+id/buttonX"
-        android:layout_width="48dp"
-        android:layout_height="48dp"
-        android:enabled="false"
-        android:visibility="invisible"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
-
-    <Button
-        android:id="@+id/btnReset"
+        android:id="@+id/btnEditor"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginEnd="16dp"
-        android:layout_marginBottom="16dp"
-        android:onClick="resetLevel"
-        android:text="Reset"
+        android:onClick="levelEditor"
+        android:text="Level Editor"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent" />
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btnStartGame" />
+
+    <EditText
+        android:id="@+id/editText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:padding="5dip"
+        android:background="@drawable/rounded_edittext"
+        android:ems="10"
+        android:hint="Player name"
+        android:includeFontPadding="false"
+        android:inputType="textPersonName"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView" />
+
+    <Button
+        android:id="@+id/btnChangeName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:onClick="changeName"
+        android:text="Change Name"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/editText" />
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="Welcome"
+        android:textColor="#FFFFFF"
+        android:textSize="24sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

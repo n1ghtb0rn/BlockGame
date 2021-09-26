@@ -10,7 +10,13 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.GitExample">
         <activity
+            android:name=".EditorActivity"
+            android:exported="true" />
+        <activity
             android:name=".MainActivity"
+            android:exported="true" />
+        <activity
+            android:name=".GameActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

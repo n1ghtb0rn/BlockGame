@@ -5,9 +5,9 @@ import java.util.ArrayList;
 public class UnitManager {
 
     public static ArrayList<Unit> units = new ArrayList<>();
-    public static ButtonUnit button;
-    public static BoxUnit box;
-    public static PlayerUnit player;
+    public static ButtonUnit button = null;
+    public static BoxUnit box = null;
+    public static PlayerUnit player = null;
 
     public static void createCurrentLevel() {
 
@@ -35,6 +35,13 @@ public class UnitManager {
                 }
             }
         }
+    }
+
+    public static void createEmptyLevel(){
+        units = new ArrayList<Unit>();
+        button = null;
+        box = null;
+        player = null;
     }
 
 }

@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#000000"
+    android:backgroundTint="#000000"
+    tools:context=".GameActivity">
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="#494949"
+        app:layout_constraintBottom_toTopOf="@+id/btnUp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:srcCompat="@tools:sample/avatars" />
+
+    <Button
+        android:id="@+id/btnLeft"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:background="#FFFFFF"
+        android:backgroundTint="#FF0000"
+        android:foregroundTint="#E91E63"
+        android:onClick="btnLeft"
+        app:layout_constraintBottom_toTopOf="@+id/buttonX"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/buttonX10"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:enabled="false"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toTopOf="@+id/btnLeft"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/btnUp"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:background="#FFFFFF"
+        android:backgroundTint="#FF0000"
+        android:foregroundTint="#E91E63"
+        android:onClick="btnUp"
+        app:layout_constraintBottom_toTopOf="@+id/buttonX8"
+        app:layout_constraintStart_toEndOf="@+id/buttonX10" />
+
+    <Button
+        android:id="@+id/buttonX12"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:enabled="false"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toTopOf="@+id/btnRight"
+        app:layout_constraintStart_toEndOf="@+id/btnUp" />
+
+    <Button
+        android:id="@+id/buttonX8"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:enabled="false"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toTopOf="@+id/btnDown"
+        app:layout_constraintStart_toEndOf="@+id/btnLeft" />
+
+    <Button
+        android:id="@+id/btnRight"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:background="#FFFFFF"
+        android:backgroundTint="#FF0000"
+        android:foregroundTint="#E91E63"
+        android:onClick="btnRight"
+        app:layout_constraintBottom_toTopOf="@+id/buttonX3"
+        app:layout_constraintStart_toEndOf="@+id/buttonX8" />
+
+    <Button
+        android:id="@+id/btnDown"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:background="#FFFFFF"
+        android:backgroundTint="#FF0000"
+        android:foregroundTint="#E91E63"
+        android:onClick="btnDown"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/buttonX" />
+
+    <Button
+        android:id="@+id/buttonX3"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:enabled="false"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/btnDown" />
+
+    <Button
+        android:id="@+id/buttonX"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:enabled="false"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/btnReset"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:onClick="resetLevel"
+        android:text="Reset"
+        app:layout_constraintBottom_toTopOf="@+id/btnBack"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.91"
+        app:layout_constraintStart_toEndOf="@+id/btnRight"
+        app:layout_constraintTop_toBottomOf="@+id/imageView" />
+
+    <Button
+        android:id="@+id/btnBack"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:onClick="back"
+        android:text="Back"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.91"
+        app:layout_constraintStart_toEndOf="@+id/btnRight"
+        app:layout_constraintTop_toBottomOf="@+id/imageView"
+        app:layout_constraintVertical_bias="0.833" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
