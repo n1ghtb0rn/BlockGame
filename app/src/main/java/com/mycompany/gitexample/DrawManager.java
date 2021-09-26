@@ -24,7 +24,7 @@ public class DrawManager {
         UnitManager.button.draw(this.paint, this.gfx);
         UnitManager.box.draw(this.paint, this.gfx);
         UnitManager.player.draw(this.paint, this.gfx);
-        //COMMENT
+
         this.imageView.setImageBitmap(bitmap);
 
     }
