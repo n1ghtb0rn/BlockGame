@@ -14,6 +14,7 @@ public class EditorActivity extends AppCompatActivity {
         setContentView(R.layout.activity_editor);
 
         DataManager.editorActivity = this;
+        DataManager.drawManager.emptyLevel();
     }
 
     public void selectWall(View v){

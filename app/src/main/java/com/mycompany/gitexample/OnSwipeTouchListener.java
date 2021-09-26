@@ -1,6 +1,7 @@
 package com.mycompany.gitexample;
 
 import android.content.Context;
+import android.util.Log;
 import android.view.GestureDetector;
 import android.view.GestureDetector.SimpleOnGestureListener;
 import android.view.MotionEvent;
@@ -17,6 +18,7 @@ public class OnSwipeTouchListener implements OnTouchListener {
 
     @Override
     public boolean onTouch(View v, MotionEvent event) {
+        Log.d(DataManager.TAG, "HEJ!");
         return gestureDetector.onTouchEvent(event);
     }
 

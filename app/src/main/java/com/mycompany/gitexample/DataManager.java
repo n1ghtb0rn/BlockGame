@@ -12,6 +12,7 @@ public class DataManager {
     public static final int CANVAS_SIZE_X = UNIT_SIZE * UNITS_X;
     public static final int CANVAS_SIZE_Y = UNIT_SIZE * UNITS_Y;
     public static final int GRADIENT_COLOR = Color.parseColor("#FFFFFF");
+    public static final String TAG = "danne";
 
     public static String playerName = "Player";
 
