@@ -10,7 +10,7 @@ public class PlayerUnit extends CircleUnit {
 
     public PlayerUnit(int _posX, int _posY){
         super(_posX, _posY);
-        this.color = Color.GREEN;
+        this.color = Color.parseColor("#43765f");
     }
 
     public void move(int difX, int difY){
